@@ -1,0 +1,50 @@
+body {
+    width: 100vh;
+    height: 100vh;
+    background: url("fondo_general.png") no-repeat center center fixed;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+div{
+    display: inline;
+}
+.nombre{
+    font-family: 'Cairo', sans-serif;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+.img{
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+}
+.div_titulo{
+    text-align: center;
+    position: relative;
+    left: 30%;
+}
+.titulo{
+    Font-family: Fira Sans;
+    Font-style: Bold;
+    Font-size: 48px;
+    Line-height: 84px;
+    Line-height: 100%;
+    Vertical-align: Center;
+}
+table{
+    position: relative;
+    left: 50px;
+}
+table, th, td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+td{
+    padding: 20px;
+    Font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+}

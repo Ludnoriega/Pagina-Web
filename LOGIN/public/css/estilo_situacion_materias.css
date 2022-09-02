@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background: url("fondo_general.png") no-repeat center center fixed;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+div{
+    display: inline;
+}
+.nombre{
+    font-family: 'Cairo', sans-serif;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-size: large;
+}
+img{
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    top: 5px;
+    margin-left: 2%;
+}
+.div_titulo{
+    text-align: center;
+    position: relative;
+    left: 20%;
+    top: 70px;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+}
+.titulo{
+    Font-family: Fira Sans;
+    Font-style: Bold;
+    Font-size: 48px;
+    Line-height: 84px;
+    Line-height: 100%;
+    Vertical-align: Center;
+    justify-content: center;
+    align-items: center;
+    display: inline;
+}
+.navegacion{
+    position: relative;
+    top: 120px;
+    width: 250px;
+    background: #86C7ED;
+    margin: 10px;
+}
+.navegacion ul{
+    list-style: none;
+}
+.menu > li{
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+}
+.menu > li > a{
+    display: block;
+    padding: 10px 15px;
+    font-family: 'Fira Sans', sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+.menu li a:hover{
+    color: white;
+    transition: all .3s;
+}
+.submenu{
+    text-align: left;
+    position: absolute;
+    color: black;
+    display: none;
+    background: #86C7ED;
+    padding: 10px;
+}
+.submenu li a{
+    display: block;
+    padding: 10px;
+    color: black;
+    font-family: 'Fira Sans', sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menu li:hover .submenu{
+    display: block;
+}
+
+td{
+    padding: 15px;
+}
+.libreta{
+    border: 2px solid black;
+    border-collapse: collapse;
+    background: white;
+    width: 70vh;
+}
+.libret{
+    border: 1px solid black;
+    height: 5vh;
+}
+.div_libreta{
+    position: relative;
+    top: 8vh;
+    left: 50vh;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    width: 300px;
+}
+.div_libreta h3{
+    font-size: 25px;
+}
+.contenedor_caja{
+    position: relative;
+    top: 15vh;
+    left: 50vh;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+input{
+    width: 500px;
+    height: 180px;
+    border-style: dotted;
+    border-width: 3px;
+    font-size: large;
+    text-align: left;
+}

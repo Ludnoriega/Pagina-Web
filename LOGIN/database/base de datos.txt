@@ -1,0 +1,67 @@
+drop database if exists Plataforma;
+Create database Plataforma;
+use Plataforma;
+
+CREATE TABLE usuarios(
+id INT AUTO_INCREMENT,
+usuarioo VARCHAR(10),
+contrasenia VARCHAR(10),
+rol VARCHAR(10),
+PRIMARY KEY (id));
+
+CREATE TABLE Alumno(
+DNI_alumno int NOT NULL,
+nombre_alumno varchar (15),
+apellido_alumno varchar (15),
+contenidos varchar (300),
+notas INT,
+id INT,
+Primary key(DNI_alumno),
+FOREIGN KEY (id) REFERENCES usuarios (id));
+
+CREATE TABLE Profesor(
+DNI int NOT NULL,
+nombre varchar (20),
+apellido varchar (20),
+materias varchar (30),
+id INT,
+Primary key (DNI),
+FOREIGN KEY (id) REFERENCES usuarios (id)
+);
+
+CREATE TABLE Curso(
+cod integer NOT NULL UNIQUE,
+año varchar (1),
+division varchar (1),
+materias varchar (25),
+DNI_alumno INTEGER,
+Primary key (cod),
+Foreign Key (DNI_alumno) REFERENCES alumno(DNI_alumno));
+
+
+CREATE TABLE Materia(
+cod integer NOT NULL,
+nombre varchar (25),
+profesor varchar (30),
+curso  integer,
+notas float(3),
+Primary key (cod),
+Foreign Key (curso) REFERENCES Curso(cod)
+);
+
+CREATE TABLE Nota(
+nota integer,
+alumno integer,
+Foreign key (nota) REFERENCES Materia (cod),
+Foreign key(alumno)REFERENCES Alumno(DNI_alumno));
+
+CREATE TABLE Profe_materia(
+profeXmateria integer,
+materias integer,
+foreign key (profeXmateria) REFERENCES Profesor (DNI),
+foreign key (materias) REFERENCES Materia (cod)
+);
+
+INSERT INTO usuarios (usuarioo, contrasenia, rol) VALUES 
+("LUD", "12345", "admin"),
+("ANA", "54321", "alumno");

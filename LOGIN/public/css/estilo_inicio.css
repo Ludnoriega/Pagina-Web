@@ -1,0 +1,106 @@
+body {
+    /*width: 100vh;
+    height: 100vh;*/
+    background: url("fondo.png") no-repeat center center fixed;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+div{
+    display: inline;
+}
+.nombre{
+    font-family: 'Cairo', sans-serif;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+.img{
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+}
+.bienvenidos{
+    text-align: center;
+    position: relative;
+    top: 20px;
+    left: -25%;
+}
+.bienvenidos_1{
+    Font-family: 'Fira Sans', sans-serif;
+    Font-style: Bold;
+    Font-size: 48px;
+    Line-height: 84px;
+    Line-height: 100%;
+    Vertical-align: Center;
+}
+.bienvenidos_2{
+    Font-family: 'Fira Sans', sans-serif;
+    Font-size: 20px;
+    Line-height: 48px;
+    Line-height: 100%;
+    Vertical-align: Center;
+}
+.opcion{
+    text-align: center;
+    position: relative;
+    top: 60px;
+    left: -25%;
+    vertical-align: center;
+    font-family: 'Fira Sans', sans-serif;;
+    font-size: 15px;
+}
+button:focus{
+    outline: 0;
+}
+.admin{
+    text-align: center;
+    position: relative;
+    top: 100px;
+    left: 14%;
+}
+.admin_1{
+    width: 300px;
+    height: 50px;
+    background-color: rgba(24, 51, 178, 1);
+    border-radius: 50px;
+    cursor: pointer;
+    border-color: white;
+    transition: box-shadow 0.2s ease-in-out;
+ }
+.admin_1:hover{
+     box-shadow: 0 0 50px 50px rgba(143, 162, 248, 1) inset;
+ }
+.alumn{
+    text-align: center;
+    position: relative;
+    top: 160px;
+    left: 14%;
+}
+.alumn_1{
+    font-size: 28px;
+    font-family: 'Fira Sans', sans-serif;
+    width: 300px;
+    height: 50px;
+    background-color: rgba(160, 102, 203, 1);
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    border-color: white;
+    transition: box-shadow 0.2s ease-in-out;
+}
+.alumn_1:hover{
+    box-shadow: 0 0 50px 50px rgba(209, 155, 249, 1) inset;
+}
+.presentación{
+    text-align: left;
+    color: gray;
+    position: relative;
+    top: 245px;
+}
+a{
+    text-decoration: none;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 28px;
+    color: white;
+}

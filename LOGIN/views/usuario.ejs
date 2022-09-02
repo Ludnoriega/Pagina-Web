@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>CREAR USUARIO</title>
+        <link rel="stylesheet" href="resources/css/estilo_usuario.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <div class="nombre">
+            <h3><img src="resources/css/letra-m.png" height="4%" width="4%" class="img"/>INSTITUTO MANUEL DE FALLA</h3>
+        </div>
+        <div class="div_titulo">
+            <h2 class="titulo">CREAR USUARIO</h2>
+        </div>
+        <div class="formulario">
+                <form action="/crear" method="POST" class="formulario_izq">
+                    <table border="0">
+                        <div class="div_flex">
+                            <tr>
+                                <td>Usuario: </td>
+                                <td><input type="text" name="usuario" size="40" required></td>
+                            </tr>
+                        </div>
+                        <div class="div_flex">
+                            <tr>
+                                <td>Contraseña: </td>
+                                <td><input type="text" name="contrasena" size="40" required></label></td>
+                            </tr>
+                        </div>
+                        <div class="div_flex">
+                            <tr>
+                                <td>Rol: </td>
+                                <td><input type="text" name="rol" size="40" required></td>
+                            </tr>
+                        </div>
+                    </table>
+                    <div class="bogton1">
+                        <button type="submit" id="btn" class="boton1" >GUARDAR</button>
+                    </div>
+                    <div class="bogton2">
+                        <button type="reset" id="btn" class="boton2" ><a href="agregar_alumno" class="cancelar">CANCELAR</a></button>
+                    </div>
+                </form>
+        </div>
+        <% if(typeof alert != "undefined") { %>
+            <script>
+              Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: '<=% showConfirmButton%>',
+                timer: '<%= timer %>'
+              }).then(()=>{
+                window.location='/<%=ruta %>'
+              })
+            </script>
+        <% } %>
+
+    </body>
+</html>

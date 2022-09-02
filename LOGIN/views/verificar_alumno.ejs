@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>VERIFICAR ALUMNO</title>
+        <link rel="stylesheet" href="resources/css/estilo_verificar.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <div class="nombre">
+            <h3><img src="resources/css/letra-m.png" height="4%" width="4%" class="img"/>INSTITUTO MANUEL DE FALLA</h3>
+        </div>
+        <div class="div_titulo">
+            <h2 class="titulo">ANTES DE INGRESAR UNA NOTA PORFAVOR INGRESE LOS SIGUIENTES DATOS:</h2>
+        </div>
+        <form action="/verificar" method="POST">
+            <div class="input_1">
+                <h2 class="dni">DNI DEL ALUMNO:</h2>
+                <input type="text" name ="DNI"  id="usuario" class="dni_input" required>
+            </div>
+            <div class="input_2">
+                <h2 class="apellido">APELLIDO DEL ALUMNO:</h2>
+                <input type="text" name ="APELLIDO"  id="contrasena" class="apellido_input" required>
+            </div>
+            <div class="boton">
+                <input type="submit" id="enviarr" class="enviar" value="VERIFICAR">
+            </div>
+            <div class="boton_cancelar">
+                <button type="reset" id="btn" class="cancelar" ><a href="admin">CANCELAR</button></a>
+            </div>
+        </form>
+
+        <% if(typeof alert != "undefined") { %>
+            <script>
+              Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                showConfirmButton: '<=% showConfirmButton%>',
+                timer: '<%= timer %>'
+              }).then(()=>{
+                window.location='/<%=ruta %>'
+              })
+            </script>
+        <% } %>
+    </body>
+</html>
