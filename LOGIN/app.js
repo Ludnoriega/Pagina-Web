@@ -80,7 +80,7 @@ app.use(session({
 //modulo de conexion de la bd
 const connection = require('./database/db');
 
-//autenticacion
+//AUTENTICACION
 app.post('/auth', (req, res)=>{
     const user = req.body.usr;
     const pass = req.body.password;
@@ -128,7 +128,7 @@ app.post('/auth', (req, res)=>{
 });
 
 
-//registro de materia
+//REGISTRO DE MATERIA
 app.post('/agregar_materia', (req, res)=>{
     const nombre_M = req.body.materiiaa;
     const nombre_m = req.body.materia;
@@ -195,8 +195,9 @@ app.post('/agregar', (req, res)=>{
     const DNI = req.body.dni;
     const COMENTARIO = req.body.comentario;
     const ID = req.body.id;
+    const CURSO_DIVI = req.body.curso_divi;
     connection.query('INSERT INTO Alumno SET ?', 
-    {nombre_alumno:NOMBRE, apellido_alumno:APELLIDO, DNI_alumno:DNI, contenidos:COMENTARIO, id:ID}, (error, results)=>{
+    {nombre_alumno:NOMBRE, apellido_alumno:APELLIDO, DNI_alumno:DNI, contenidos:COMENTARIO, id:ID, ID_CURSO:CURSO_DIVI}, (error, results)=>{
         if(error){
             console.log("El error de MYSQL es: "+ error);
         }
